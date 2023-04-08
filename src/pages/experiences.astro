@@ -3,9 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+import Icon from "../components/Icon.astro";
 ---
 
-<BaseLayout title="Parcours professionnel - Olivier Brutinel" description="Découvrez mon parcours professionnel au travers de mes expériences">
+<BaseLayout title="Parcours professionnel - Développeur Full Stack PHP Laravel - Olivier Brutinel" description="Découvrez mon parcours professionnel au travers de mes expériences">
 	<div class="stack gap-20">
 		<main class="wrapper page">
 
@@ -26,14 +27,16 @@ import Hero from '../components/Hero.astro';
 				<div class="content">
 					<h2>Développeur Full Stack PHP Laravel</h2>
 					<h3>
-						<span>CDI | <a href="https://www.wagaia.com" target="_blank">Wagaia</a> à Marseille</span>
+						<span>CDI | <a href="https://www.wagaia.com" target="_blank">WAGAIA</a> à Marseille</span>
 					</h3>
 					<ul>
 						<li>Développement de sites et d’applications sur mesure (Extranet, CRM, Applications métiers, Sites E-commerce)</li>
 						<li>Développement sous le Framework Laravel</li>
+						<li>Maintenance & évolution du framework PHP développé par l'agence</li>
+						<li>Implémentation d'API (Stripe, OVH SMS, FranchiseOnCloud, ...)</li>
 						<li>Intégration & développement de sites responsives (front & back)</li>
 						<li>Intégration depuis une maquette graphique (Figma, Photoshop)</li>
-						<li>Maintenance & évolution du framework PHP développé par l'agence</li>
+						<li>Développement avec WordPress et Prestashop</li>
 						<li>Livraison & mise en production</li>
 					</ul>
 					<div class="tags">
@@ -41,12 +44,21 @@ import Hero from '../components/Hero.astro';
 						<span>PHP8</span>
 						<span>MySQL</span>
 						<span>Github</span>
-						<span>JQuery 5</span>
+						<span>JQuery</span>
 						<span>JavaScript</span>
 						<span>Boostrap 5</span>
 					</div>
 				</div>
 			</section>
+
+			<div class="training">
+				<div>
+					<Icon icon="rocket-launch" size="1.33em" /> 2018 - Formation Laravel
+				</div>
+				<div>
+					<Icon icon="rocket-launch" size="1.33em" /> 2014 - Formation Symfony2
+				</div>
+			</div>
 
 			<section class="experience">
 				<div class="time">
@@ -57,9 +69,9 @@ import Hero from '../components/Hero.astro';
 					</a>
 				</div>
 				<div class="content">
-					<h2>Développeur PHP Full Stack</h2>
+					<h2>Développeur Full Stack PHP</h2>
 					<h3>
-						<span>CDI | <a href="https://www.linkedin.com/company/hors-norme/">Hors-Norme</a> à Marseille</span>
+						<span>CDI | <a href="https://www.linkedin.com/company/hors-norme/">HORS-NORME</a> à Marseille</span>
 					</h3>
 					<ul>
 						<li>Analyse, conception, développement et mise en place de solutions techniques</li>
@@ -80,7 +92,11 @@ import Hero from '../components/Hero.astro';
 				<div class="content">
 					<h2>Développeur / Intégrateur Mobile</h2>
 					<h3>
-						<span>Intérim | <a href="https://www.melodyhealthcare.com"  target="_blank">MELODY HEALTHCARE - GROUPE PUBLICIS</a> à Montpellier</span>
+						<span>
+							Intérim |
+							<a href="https://www.melodyhealthcare.com"  target="_blank">MELODY HEALTHCARE - GROUPE PUBLICIS</a>
+							à Montpellier
+						</span>
 					</h3>
 					<ul>
 						<li>Développement d'applications pour IPad en JavaScript</li>
@@ -88,6 +104,64 @@ import Hero from '../components/Hero.astro';
 					</ul>
 				</div>
 			</section>
+
+			<section class="experience">
+				<div class="time">
+					<span>Juin 2010 à</span>
+					<span>Juin 2011</span>
+				</div>
+				<div class="content">
+					<h2>Développeur PHP</h2>
+					<h3>
+						<span>Freelance | Sydney, Australie</span>
+					</h3>
+					<ul>
+						<li>Développement de sites sous le Framework Symfony (1.4) et du CMS WordPress</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="experience">
+				<div class="time">
+					<span>Octobre 2008 à</span>
+					<span>Mai 2010</span>
+					<a href="https://www.highco.com" target="_blank">
+						<img src="../assets/logos/highco.png" alt="Groupe HighCo" />
+					</a>
+				</div>
+				<div class="content">
+					<h2>Développeur PHP Symfony</h2>
+					<h3>
+						<span>
+							CDI |
+							<a href="https://www.highco.com"  target="_blank">BLEUROY.COM – GROUPE HIGHCO</a>
+							à Marseille
+						</span>
+					</h3>
+					<ul>
+						<li>Développement de site Internet sous le Framework Symfony (1.4)</li>
+						<li>Intégration (X)HTML/CSS de maquettes graphiques en respectant les normes W3C et d’accessibilités</li>
+						<li>Développement d’application Web (Géolocalisation Google MAP, Opération flux XML)</li>
+					</ul>
+				</div>
+			</section>
+
+			<div class="formation">
+				<h1 class="title">Formations</h1>
+
+				<section class="experience">
+					<div class="time">
+						<span>2007 - 2008</span>
+					</div>
+					<div class="content">
+						<h2>LICENCE PROFESSIONNELLE (NTI)</h2>
+						<h3>
+							<span>Université de Provence</span>
+						</h3>
+					</div>
+				</section>
+			</div>
+
 		</main>
 
 		<ContactCTA />

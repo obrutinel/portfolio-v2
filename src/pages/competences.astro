@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+import Icon from "../components/Icon.astro";
+import Skills from "../components/Skills.astro";
+---
+
+<BaseLayout title="Compétences - Développeur Full Stack PHP Laravel - Olivier Brutinel" description="Mes compétences : Framework Laravel, PHP8, jQuery, MySQL, Github">
+	<section class="stack gap-20">
+		<main class="wrapper page page-skills">
+
+			<Hero
+				title="Compétences"
+				tagline="Au cours de mes experiences au sein d'agences digitales, j'ai pu développer mes compétences sur des projets de différent types."
+			>
+			</Hero>
+
+
+			<section class="blocs">
+				<h2>Mes domaines d'applications</h2>
+				<ul>
+					<li>Application web sur mesure</li>
+					<li>CRM</li>
+					<li>Extranet / Intranet</li>
+					<li>ERP</li>
+					<li>Site vitrine</li>
+					<li>Site E-commerce</li>
+					<li>Blog</li>
+					<li>WordPress</li>
+					<li>PrestaShop</li>
+				</ul>
+			</section>
+
+			<section class="blocs">
+				<h2>Mes outils</h2>
+			</section>
+			<Skills />
+
+			<section class="blocs">
+				<h2>En plus</h2>
+
+				<p>Travail en équipe</p>
+				<p>Curieux et passionné</p>
+			</section>
+
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
