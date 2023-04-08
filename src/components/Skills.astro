@@ -4,7 +4,7 @@ import Icon from './Icon.astro';
 
 <section class="box skills">
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		<Icon icon="terminal-window" color="var(--accent-regular)" size="4rem" gradient />
 		<h2>Développement Back-End</h2>
 		<p>
 			PHP 8.2 / Laravel 10 / POO / MVC <br />
@@ -13,7 +13,7 @@ import Icon from './Icon.astro';
 		</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<Icon icon="trophy" color="var(--accent-regular)" size="4rem" gradient />
 		<h2>Développement Front-End</h2>
 		<p>
 			HTML / CSS3 / JavaScript<br />
@@ -22,7 +22,7 @@ import Icon from './Icon.astro';
 		</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<Icon icon="strategy" color="var(--accent-regular)" size="4rem" gradient />
 		<h2>Divers</h2>
 		<p>
 			PHPStan / Composer / GitHub<br />
@@ -66,6 +66,10 @@ import Icon from './Icon.astro';
 			grid-template-columns: repeat(3, 1fr);
 			gap: 5rem;
 			text-align: center;
+		}
+
+		.skills .stack {
+			align-items: center;
 		}
 
 		.skills h2 {

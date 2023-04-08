@@ -64,10 +64,10 @@
 	--text-5xl: 4.5rem;
 
 	/* Fonts */
-	--font-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+	--font-system: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	--font-body: 'Public Sans', var(--font-system);
-	--font-brand: Rubik, var(--font-system);
+	--font-body: 'Lato', 'Public Sans', var(--font-system);
+	--font-brand: 'Lato', var(--font-system);
 
 	/* Transitions */
 	--theme-transition: 0.2s ease-in-out;
@@ -225,6 +225,80 @@ h5 {
 }
 .gap-48 {
 	gap: 12rem;
+}
+
+.page .stack {
+	margin-bottom: 2rem;
+}
+
+.page .stack .title {
+	max-width: 100%;
+}
+
+
+.badge {
+	content: '10+ exp';
+	border-radius: 999rem;
+	padding: 0.1rem 1rem;
+	position: absolute;
+	background: var(--gradient-accent-orange);
+	right: 0px;
+	top: -5px;
+	font-size: var(--text-md);
+}
+
+.experience {
+	display: flex;
+	flex-direction: row;
+	border: 1px solid var(--gray-800);
+	border-radius: 1.5rem;
+	padding: 2.5rem;
+	margin-bottom: 3rem;
+}
+
+.experience .time {
+	width: 220px;
+}
+
+.experience .time > span {
+	display: block;
+}
+
+.experience .time img {
+	box-shadow: 0 0 0;
+	border-radius: 0 0 0;
+}
+
+.experience .content h2 {
+	font-size: var(--text-xl);
+	margin-bottom: 0.2rem;
+}
+
+.experience .content h3 {
+	font-size: var(--text-lg);
+	margin-bottom: 0.8rem;
+}
+
+.experience .content ul {
+	font-size: var(--text-md);
+	list-style-position: inside;
+	padding: 0;
+	margin-bottom: 1.2rem;
+}
+
+.experience .content .tags {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.experience .content .tags > span {
+	background-color: var(--accent-regular);
+	border-radius: 999rem;
+	padding: 0.1rem 0.8rem;
+	margin-right: 0.5rem;
+	margin-bottom: 0.5rem;
+	font-size: var(--text-sm);
 }
 
 @media (min-width: 50em) {
