@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="Mentions légales - Développeur Full Stack PHP Laravel - Olivier Brutinel" description="">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="Mentions légales"
+			/>
+
+			<section>
+				<h3 class="section-title">Hébergement</h3>
+				<div class="content">
+					<p>
+						Ce site internet est hébergé par Hostinger, une société enregistrée en Lituanie sous le numéro d'entreprise 304877705, dont le siège social est situé à Europos pr. 32-4, LT-46326 Kaunas, Lituanie.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h3 class="section-title">Cookies</h3>
+				<div class="content">
+					<p>
+						En poursuivant votre navigation sur ce site internet, vous acceptez l'utilisation de cookies.<br /><br />
+						Un cookie est un petit fichier texte créé par un serveur web du site internet visité. <br />
+						Les cookies sont stockés sur le PC de l'internaute. <br />
+						Les cookies permettent durant une durée de vie qui varie de reconnaître la machine qui se connecte.<br /><br />
+						Sur ce site web, les cookies sont utilisés pour :
+					</p>
+					<ul>
+						<li>Réaliser des statistiques de visites</li>
+						<li>Vous offrir une meilleure expérience utilisateur</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		section {
+			font-size: var(--text-md);
+		}
+
+		.section-title {
+			margin-bottom: 0.8rem;
+		}
+	}
+</style>

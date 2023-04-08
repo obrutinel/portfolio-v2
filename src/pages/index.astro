@@ -49,60 +49,15 @@ const projects = (await getCollection('work'))
 				/>
 			</header>
 
+			<p class="intro">
+				Depuis 2008, je cumule les expériences professionnelles en agence digitale et en mission freelance.<br />
+				Passionné par ce domaine, je reste en veille permanente sur ses nouvelles technologies.
+			</p>
+
 			<Skills />
+
 		</div>
 
-		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section with-background with-cta">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
-				</header>
-
-				<div class="gallery">
-					<Grid variant="offset">
-						{
-							projects.map((project) => (
-								<li>
-									<PortfolioPreview project={project} />
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-
-				<div class="cta">
-					<CallToAction href="/work/">
-						View All
-						<Icon icon="arrow-right" size="1.2em" />
-					</CallToAction>
-				</div>
-			</section>
-
-			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to recieve praise for my work in several publications. Take
-						a look below to learn more.
-					</p>
-				</header>
-
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-			</section>
-		</main>
-
-		<ContactCTA />
 	</div>
 </BaseLayout>
 
@@ -224,6 +179,11 @@ const projects = (await getCollection('work'))
 
 		.cta {
 			grid-area: cta;
+		}
+
+		.intro {
+			font-size: var(--text-lg);
+			text-align: center;
 		}
 	}
 
