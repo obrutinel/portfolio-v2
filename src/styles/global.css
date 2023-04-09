@@ -377,6 +377,11 @@ h5 {
 	margin-top: 3rem;
 }
 
+.intro {
+	max-width: 930px;
+	margin: auto;
+}
+
 @media (min-width: 50em) {
 	.lg\:gap-2 {
 		gap: 0.5rem;
