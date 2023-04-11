@@ -7,8 +7,8 @@ const textLinks: { label: string; href: string }[] = [
 	{ label: 'Accueil', href: '/' },
 	{ label: 'Parcours', href: '/experiences/' },
 	{ label: 'Compétences', href: '/competences/' },
-	{ label: 'Portfolio', href: '/portfolio/' },
-	{ label: 'About', href: '/about/' },
+	//{ label: 'Portfolio', href: '/portfolio/' },
+	//{ label: 'About', href: '/about/' },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -21,8 +21,8 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 <nav>
 	<div class="menu-header">
 		<a href="/" class="site-title">
-			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
-			Web-worker
+			<img src="../assets/logo.svg" alt="Olivier Brutinel - Développeur Full Stack PHP Laravel" width="40" height="40"/>
+			Web-Worker
 		</a>
 		<menu-button>
 			<template>
@@ -249,6 +249,10 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 
 		.site-title {
 			font-size: var(--text-lg);
+		}
+
+		.site-title > img {
+			filter: var(--filter-logo);
 		}
 
 		#menu-content {

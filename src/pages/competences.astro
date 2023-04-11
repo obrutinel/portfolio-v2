@@ -5,17 +5,17 @@ import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 import Icon from "../components/Icon.astro";
 import Skills from "../components/Skills.astro";
+import SoftSkills from "../components/SoftSkills.astro";
 ---
 
 <BaseLayout title="Compétences - Développeur Full Stack PHP Laravel - Olivier Brutinel" description="Mes compétences : Framework Laravel, PHP8, jQuery, MySQL, Github">
-	<section class="stack gap-20">
+	<div class="stack gap-20">
 		<main class="wrapper page page-skills">
 
 			<Hero
 				title="Compétences"
 				tagline="Au cours de mes experiences au sein d'agences digitales, j'ai pu développer mes compétences sur des projets de différent types."
-			>
-			</Hero>
+			/>
 
 
 			<section class="blocs">
@@ -34,16 +34,16 @@ import Skills from "../components/Skills.astro";
 			</section>
 
 			<section class="blocs special">
-				<h2>Mes outils</h2>
+				<h2>Hard skills</h2>
 			</section>
 			<Skills />
 
-			<section class="blocs spacer-top">
-				<h2>En plus</h2>
+			<div class="spacer"></div>
 
-				<p>Travail en équipe</p>
-				<p>Curieux et passionné</p>
+			<section class="blocs special">
+				<h2>Soft skills</h2>
 			</section>
+			<SoftSkills />
 
 		</main>
 
@@ -105,6 +105,10 @@ import Skills from "../components/Skills.astro";
 		section {
 			display: contents;
 			font-size: var(--text-lg);
+		}
+
+		.spacer {
+			margin-bottom: 3rem;
 		}
 	}
 </style>

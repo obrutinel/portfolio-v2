@@ -4,30 +4,32 @@ import Icon from './Icon.astro';
 
 <section class="box skills">
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="4rem" gradient />
-		<h2>Développement Back-End</h2>
+		<Icon icon="team" color="var(--accent-regular)" size="4rem" gradient />
 		<p>
-			PHP 8.2 / Laravel 10 / POO / MVC <br />
-			Principes SOLID / Standards PSR<br />
-			MySQL / MariaDB
+			Travail en équipe<br />
+			Sens du collectif
 		</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="front" color="var(--accent-regular)" size="4rem" gradient />
-		<h2>Développement Front-End</h2>
+		<Icon icon="lang" color="var(--accent-regular)" size="4rem" gradient />
 		<p>
-			HTML5 / CSS3 / JavaScript<br />
-			JQuery / Bootstrap 5<br />
-			Figma / Photoshop
+			Français : langue maternelle<br />
+			Anglais : technique
 		</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="4rem" gradient />
-		<h2>Divers</h2>
+		<Icon icon="heart" color="var(--accent-regular)" size="4rem" gradient />
 		<p>
-			PHPStan / Composer / GitHub<br />
-			Trello / Jira / UML / AJAX / PHPStorm<br />
-			Apache / Nginx / SEO
+			Curieux<br />
+			Passionné<br />
+			Autonome<br />
+		</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="mountains" color="var(--accent-regular)" size="4rem" gradient />
+		<p>
+			VTT<br />
+			Randonnée<br />
 		</p>
 	</div>
 </section>
@@ -63,8 +65,8 @@ import Icon from './Icon.astro';
 
 		.skills {
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 3rem;
 			text-align: center;
 		}
 
