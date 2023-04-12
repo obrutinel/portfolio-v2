@@ -396,6 +396,82 @@ h5 {
 	margin-bottom: 4.5rem;
 }
 
+@media (max-width: 768px) {
+
+	.stack {
+		text-align: center;
+	}
+
+	.stack svg {
+		margin: 0 auto;
+	}
+
+	.page .stack {
+		margin-bottom: 1rem;
+	}
+
+	.experience {
+		flex-wrap: wrap;
+		margin-bottom: 2rem;
+	}
+
+	.experience .time {
+		width: 100%;
+		border-bottom: 1px solid var(--gray-800);
+		padding: 0 0 0.8rem;
+		margin-bottom: 0.1rem;
+	}
+
+	.experience .time span {
+		display: inline-block;
+	}
+
+	.experience .content h2 {
+		font-size: var(--text-lg);
+		margin-bottom: 0.7rem;
+	}
+
+	.experience img {
+		display: none;
+	}
+
+	.experience .content ul {
+		list-style-position: outside;
+		text-align: left;
+	}
+
+	.experience .content ul li {
+		font-size: 17px;
+	}
+
+	.experience .content .tags {
+		justify-content: center;
+	}
+
+	.training {
+		flex-direction: column;
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.blocs ul {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1rem;
+	}
+
+
+	.blocs ul li {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+
+	.blocs.special {
+		margin-top: 2rem;
+	}
+}
+
 @media (min-width: 50em) {
 	.lg\:gap-2 {
 		gap: 0.5rem;

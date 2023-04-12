@@ -311,6 +311,13 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		}
 	}
 
+	@media (max-width: 800px) {
+
+		.site-title > img {
+			filter: var(--filter-logo);
+		}
+	}
+
 	@media (min-width: 60em) {
 		.socials {
 			display: flex;

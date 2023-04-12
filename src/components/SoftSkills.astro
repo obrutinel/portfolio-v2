@@ -20,8 +20,7 @@ import Icon from './Icon.astro';
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="heart" color="var(--accent-regular)" size="4rem" gradient />
 		<p>
-			Curieux<br />
-			Passionné<br />
+			Curieux / Passionné<br />
 			Autonome<br />
 		</p>
 	</div>
@@ -55,6 +54,14 @@ import Icon from './Icon.astro';
 
 	.skills p {
 		color: var(--gray-400);
+	}
+
+	@media (max-width: 768px) {
+
+		.skills {
+			gap: 1.5rem;
+		}
+
 	}
 
 	@media (min-width: 50em) {
