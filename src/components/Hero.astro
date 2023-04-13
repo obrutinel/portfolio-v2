@@ -62,14 +62,15 @@ const { align = 'center', tagline, title, badge } = Astro.props;
 		}
 
 		.start .badge {
-			content: '10+ exp';
+			content: "10+ exp";
 			border-radius: 999rem;
 			padding: 0.1rem 1rem;
-			position: absolute;
 			background: var(--gradient-accent-orange);
-			right: 0px;
-			top: -5px;
 			font-size: var(--text-md);
+			display: inline-block;
+			position: relative;
+			top: -10px;
+			margin: 0 0 0 0.3rem;
 		}
 
 		.title {

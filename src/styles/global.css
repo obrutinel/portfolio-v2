@@ -239,19 +239,6 @@ h5 {
 	max-width: 100%;
 }
 
-
-.badge {
-	content: '10+ exp';
-	border-radius: 999rem;
-	padding: 0.1rem 1rem;
-	position: absolute;
-	background: var(--gradient-accent-orange);
-	right: 0px;
-	top: -5px;
-	font-size: var(--text-md);
-	color: #ffffff;
-}
-
 .experience {
 	display: flex;
 	flex-direction: row;
@@ -329,6 +316,18 @@ h5 {
 	font-size: var(--text-md);
 }
 
+.training > div > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	gap: 1rem;
+}
+
+.training > div > div.symfony svg {
+	fill: var(--gray-200);
+}
+
 .formation h1 {
 	text-align: center;
 	font-size: var(--text-4xl);
@@ -388,7 +387,6 @@ h5 {
 }
 
 .intro {
-	max-width: 930px;
 	margin: auto;
 }
 
