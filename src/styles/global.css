@@ -309,6 +309,7 @@ h5 {
 }
 
 .training > div {
+	display: inline-flex;
 	padding: 2rem 3rem;
 	border: 1px solid var(--gray-800);
 	border-radius: 1.5rem;
@@ -467,6 +468,10 @@ h5 {
 
 	.blocs.special {
 		margin-top: 2rem;
+	}
+
+	.training > div {
+		padding: 1rem 2rem;
 	}
 }
 
