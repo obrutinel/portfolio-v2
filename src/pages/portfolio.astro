@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+import Icon from "../components/Icon.astro";
+import Skills from "../components/Skills.astro";
+import SoftSkills from "../components/SoftSkills.astro";
+import Item from "../components/Item.astro";
+---
+
+<BaseLayout title="Compétences - Développeur Full Stack PHP Laravel - Olivier Brutinel" description="Mes compétences : Framework Laravel, PHP8, jQuery, MySQL, Github">
+	<div class="stack gap-20">
+		<main class="wrapper page page-skills">
+
+			<Hero
+				title="Portofolio"
+				tagline="Mes réalisations"
+			/>
+
+
+			<section class="grid-demo">
+
+				<div class="actions">
+					<label>
+						<select class="control-field filter-field form-control">
+							<option value="" selected>All</option>
+							<option value="red">Red</option>
+							<option value="blue">Blue</option>
+							<option value="green">Green</option>
+						</select>
+					</label>
+				</div>
+				<div class="grid">
+
+					<Item title="1" data="red" />
+					<Item title="2" data="blue" />
+					<Item title="3" data="red" />
+					<Item title="4" data="red" />
+
+				</div>
+
+
+			</section>
+
+
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<script>
+
+	import Muuri from 'muuri';
+
+	var grid = null;
+	var docElem = document.documentElement;
+	var demo = document.querySelector('.grid-demo');
+	var gridElement = demo.querySelector('.grid');
+	var filterField = demo.querySelector('.filter-field');
+	var searchField = demo.querySelector('.search-field');
+	var sortField = demo.querySelector('.sort-field');
+	var layoutField = demo.querySelector('.layout-field');
+	var addItemsElement = demo.querySelector('.add-more-items');
+	var characters = 'abcdefghijklmnopqrstuvwxyz';
+	var filterOptions = ['red', 'blue', 'green'];
+	var dragOrder = [];
+	var uuid = 0;
+	var filterFieldValue;
+	var sortFieldValue;
+	var layoutFieldValue;
+	var searchFieldValue;
+
+	initGrid();
+
+	filterField.addEventListener('change', filter);
+
+	function filter() {
+
+		filterFieldValue = filterField.value;
+		grid.filter(function (item) {
+			var element = item.getElement();
+			var isSearchMatch = !searchFieldValue ? true : (element.getAttribute('data-title') || '').toLowerCase().indexOf(searchFieldValue) > -1;
+			var isFilterMatch = !filterFieldValue ? true : (element.getAttribute('data-color') || '') === filterFieldValue;
+			return isSearchMatch && isFilterMatch;
+		});
+
+	}
+
+	function initGrid() {
+
+		var dragCounter = 0;
+
+		grid = new Muuri(gridElement, {
+			layoutDuration: 400,
+			layoutEasing: 'ease',
+			dragEnabled: true,
+			dragSortInterval: 50,
+			dragContainer: document.body,
+			/*dragStartPredicate: function (item, event) {
+				var isDraggable = sortFieldValue === 'order';
+				var isRemoveAction = elementMatches(event.target, '.card-remove, .card-remove i');
+				return isDraggable && !isRemoveAction ? Muuri.ItemDrag.defaultStartPredicate(item, event) : false;
+			},*/
+			dragReleaseDuration: 400,
+			dragReleseEasing: 'ease'
+		});
+
+	}
+
+</script>
+
+<style>
+
+
+	@media (min-width: 50em) {
+
+		.grid {
+			position: relative;
+			/*display: grid;
+			grid-template-columns: repeat(3, 1fr);*/
+		}
+
+	}
+</style>
