@@ -1,15 +1,24 @@
 ---
 interface Props {
 	title: string;
-	data?: string;
+	filter?: string;
+	img?: string;
 	align?: 'start' | 'center';
 }
 
-const { align = 'center', title, data } = Astro.props;
+const {
+	align = 'center',
+	title,
+	filter,
+	img
+} = Astro.props;
+
+
 ---
 
-<div class="item" data-color={data}>
+<div class="item" data-color={filter}>
 	<div class="item-content">
+		<img src="assets/portfolio/{img}" alt={title} />
 		{title}
 	</div>
 </div>

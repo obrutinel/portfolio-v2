@@ -1,0 +1,26 @@
+{
+  "items": {
+    "item": [
+      {
+        "name": "Adom Plus",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod.",
+        "image": "https://www.adomplus.com/images/logo.png",
+        "url": "https://www.adomplus.com",
+        "filters": [
+          { "filter" : "red" },
+          { "filter" : "blue" }
+        ]
+      },
+      {
+        "name": "Site 2",
+        "description": "Blablabla",
+        "image": "https://www.blablabla/images/logo.png",
+        "url": "https://www.Blablabla.com",
+        "filters": [
+          { "filter" : "black" },
+          { "filter" : "blue" }
+        ]
+      }
+    ]
+  }
+}

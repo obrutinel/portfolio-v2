@@ -33,7 +33,8 @@ import Item from "../components/Item.astro";
 				</div>
 				<div class="grid">
 
-					<Item title="1" data="red" />
+					<Item title="1" filter="red" img="adomplus.jpg" />
+
 					<Item title="2" data="blue" />
 					<Item title="3" data="red" />
 					<Item title="4" data="red" />
@@ -52,7 +53,17 @@ import Item from "../components/Item.astro";
 
 <script>
 
-	import Muuri from 'muuri';
+	const data = await fetch('/portfolio.json').then((response) =>
+		response.json()
+	);
+	console.log(data);
+
+	data.forEach(data.item, function(i, f) {
+		console.log(f);
+		console.log(f.title);
+	});
+
+	/*import Muuri from 'muuri';
 
 	var grid = null;
 	var docElem = document.documentElement;
@@ -98,16 +109,11 @@ import Item from "../components/Item.astro";
 			dragEnabled: true,
 			dragSortInterval: 50,
 			dragContainer: document.body,
-			/*dragStartPredicate: function (item, event) {
-				var isDraggable = sortFieldValue === 'order';
-				var isRemoveAction = elementMatches(event.target, '.card-remove, .card-remove i');
-				return isDraggable && !isRemoveAction ? Muuri.ItemDrag.defaultStartPredicate(item, event) : false;
-			},*/
 			dragReleaseDuration: 400,
 			dragReleseEasing: 'ease'
 		});
 
-	}
+	}*/
 
 </script>
 
